@@ -1,0 +1,10 @@
+.bg-gray{
+    background-color: #f8f8f8;
+}
+.gray{
+    color: gray;
+}
+.banner-1{
+    background-image: url('img/banner-1.jpg');
+    background-size: cover;
+}
