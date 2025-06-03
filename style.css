@@ -6,5 +6,75 @@
 }
 .banner-1{
     background-image: url('img/banner-1.jpg');
+}
+
+
+.products:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 20px 20px 0px 0px;
+}
+.products:hover .hiding-btn{
+    opacity: 100;
+}
+
+.banner-ad-1{
+    background-image: url('img/banner-ad-1.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+}
+.anim-btn{
+    text-decoration: none;
+    position: relative;
+    width: max-content;
+}
+.anim-btn::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    width: 0%;
+    transition-duration: 1s ;
+}
+.anim-btn:hover::after{
+    width: 100%;
+    background-color: white;
+}
+
+.banner-ad-2{
+    background-image: url('img/banner-ad-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-ad-3{
+    background-image: url('img/banner-ad-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slidebtns{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.slidebtns div{
+    position: static;
+}
+
+
+.hiding-btn{
+    display: flex;
+    opacity: 0;
+}
+.footer.logo{
+    width: 100%;
+}
+.footer.logo img{
+    width: 100%;
+}
+.text-gray{
+    color: gray;
+}
+.ftr-link{
+    color: black;
+    text-decoration-color: black;
 }

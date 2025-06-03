@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -242,7 +245,7 @@
 </section>
 <!-- Banner-1 -->
 <section>
-    <div class="container-fluid  banner-1">
+    <div class="container-fluid banner-1">
         <div class="p-3 pb-0">
             <div class="row">
                 <div class="col-lg-6 pt-5 mt-5">
@@ -340,76 +343,567 @@
         </div>
     </div>
 </section>
-<!-- swiper-slider -->
-<section>
-    <div class="py-5 overflow-hidden">
+<!-- swiper-slider-1 -->
+<section class="py-5 overflow-hidden">
         <div class="px-lg-4">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header d-flex flex-wrap justify-content-between mb-5">
-                        <h2 class="section-title">Category</h2>
+                    <div class="section-header d-flex flex-wrap justify-content-between align-items-center mb-5">
+                        <h2 class="section-title fs-2 fw-1">
+                            Category
+                        </h2>
                         <div class="d-flex align-items-center">
-                            <a href="" class="btn btn-success me-2">View All</a>
-                            <div class="swiper-buttons">
-                                <button class="swiper-prev category-carousel-prev btn bg-gray swiper-button-disabled" disabled tabindex="-1" aria-label="Previous slide" aria-controls="swiper-slider-1" aria-disabled="true"><i class="fa-solid fa-less-than"></i></button>
-                                <button class="swiper-next category-carousel-next btn bg-gray" tabindex="0"  aria-label="Next slide" aria-controls="swiper-slider-1" aria-disabled="false"><i class="fa-solid fa-greater-than"></i></button>
+                            <a href="#">
+                                <button class="btn btn-success me-2">View All</button>
+                            </a>
+                            <div class="slidebtns mt-1">
+                                <div class="swiper-prev bg-gray rounded-3 px-2" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-1"><i class="ri-arrow-left-s-line text-dark fs-1"></i></div>
+                                <div class="swiper-next bg-gray rounded-3 px-2" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-1"><i class="ri-arrow-right-s-line text-dark fs-1"></i></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="swiper mySwiper swiper-initialized swiper-horizontal">
+                <div class="swiper-wrapper text-center" id="swiper-wrapper-1" aria-live="off" style="transition-duration: 300ms; transform: translate3d(-1242px, 0px, 0px);">
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="1 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="0">
+                        <img src="img/category-thumb-1.jpg" alt="" class="rounded-circle ">
+                        <h4 class="fs-6 fw-normal mt-2">Fruits &amp; Veges</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="2 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="1">
+                        <img src="img/category-thumb-2.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Breads &amp; Sweets</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="3 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="2">
+                        <img src="img/category-thumb-3.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Fruits &amp; Veges</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="4 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="3">
+                        <img src="img/category-thumb-4.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Beverages</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="5 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="4">
+                        <img src="img/category-thumb-5.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Meat Products</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column swiper-slide-prev" role="group" aria-label="6 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="5">
+                        <img src="img/category-thumb-6.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Breads</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column swiper-slide-active" role="group" aria-label="7 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="6">
+                        <img src="img/category-thumb-7.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Fruits &amp; Veges</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column swiper-slide-next" role="group" aria-label="8 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="7">
+                        <img src="img/category-thumb-8.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Breads &amp; Sweets</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="9 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="8">
+                        <img src="img/category-thumb-1.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Fruits &amp; Veges</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="10 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="9">
+                        <img src="img/category-thumb-1.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Beverages</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="11 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="10">
+                        <img src="img/category-thumb-1.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Meat Products</h4>
+                    </div>
+                    <div class="swiper-slide d-flex flex-column" role="group" aria-label="12 / 12" style="width: 177px; margin-right: 30px;" data-swiper-slide-index="11">
+                        <img src="img/category-thumb-1.jpg" alt="" class="rounded-circle">
+
+                        <h4 class="fs-6 fw-normal mt-2">Breads</h4>
+                    </div>
+                </div>
+
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+</section>
+<!-- products -->
+<section class="py-5">
+    <div class="px-lg-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header d-flex flex-wrap justify-content-between my-4">
+                    <h2 class="section-title">Best selling products</h2>
+                    <div class="d-flex align-items-center">
+                        <a class="btn btn-success rounded-1" href="">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-4">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="category-carousel swiper swiper-initialized swiper-horizontal">
-                        <div class="swiper-wrapper" id="swiper-slider-1" aria-live="polite">
-                            <a href="" class="nav-link swiper-slide text-center swiper-slide-active" role="group" aria-label="1/12">
-                                <img class="rounded-circle" src="img/category-thumb-1.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center swiper-slide-next" role="group" aria-label="2/12">
-                                <img class="rounded-circle" src="img/category-thumb-2.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="3/12">
-                                <img class="rounded-circle" src="img/category-thumb-3.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="4/12">
-                                <img class="rounded-circle" src="img/category-thumb-4.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="5/12">
-                                <img class="rounded-circle" src="img/category-thumb-5.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="6/12">
-                                <img class="rounded-circle" src="img/category-thumb-6.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="7/12">
-                                <img class="rounded-circle" src="img/category-thumb-7.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="8/12">
-                                <img class="rounded-circle" src="img/category-thumb-8.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="9/12">
-                                <img class="rounded-circle" src="img/category-thumb-1.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="10/12">
-                                <img class="rounded-circle" src="img/category-thumb-1.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="11/12">
-                                <img class="rounded-circle" src="img/category-thumb-1.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
-                            <a href="" class="nav-link swiper-slide text-center" role="group" aria-label="12/12">
-                                <img class="rounded-circle" src="img/category-thumb-1.jpg" alt="">
-                                <h4 class="fs-6 mt-3 fw-normal category-title">Fruits & Veges</h4>
-                            </a>
+                <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 d-flex justify-content-center">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Whole Wheat Sandwich Bread</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Whole Grain Oatmeal</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (41)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$44.00</del></span>
+                                    <span><b>$40.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Sharp Cheddar Cheese Block</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (32)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$14.00</del></span>
+                                    <span><b>$10.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-4.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Organic Baby Spinach</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$30.00</del></span>
+                                    <span><b>$19.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-5.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Organic Spinach Leaves (Fresh Produce)</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-6.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Fresh Salmon</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-7.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Imported Italian Spaghetti Pasta</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-8.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Granny Smith Apples</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-9.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Organic 2% Reduced Fat Milk</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card products border-0">
+                            <div class="card-img-top text-center p-5 justify-content-center d-flex">
+                                <a href="">
+                                    <img class="tab-image" src="img/product-thumb-10.png" alt="">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column text-center gap-2">
+                                <h3 class="fs-6 fw-normal">Greek Style Plain Yogurt</h3>
+                                <div class="d-flex justify-content-center">
+                                    <span class="rating d-flex">
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                        <div width="18" height="18" class="text-warning">⭐</div>
+                                    </span>
+                                    <span>
+                                        (222)
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <span><del>$24.00</del></span>
+                                    <span><b>$18.00</b></span>
+                                    <span class="border border-sm fw-light px-1">10% OFF</span>
+                                </div>
+                                <div class="hiding-btn align-items-center p-3 pt-0">
+                                    <div class="row g-1 mt-2">
+                                        <div class="col-3">
+                                            <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7">
+                                            <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -417,6 +911,1852 @@
         </div>
     </div>
 </section>
-
+<!-- banner-2 -->
+<section class="py-3">
+    <div class="px-2 px-lg-4">
+        <div class="row justify-content-between ps-3 pe-3">
+            <div class="col-12 col-lg-7 px-4 py-5 banner-ad-1">
+                <div class="p-5">
+                    <div class="py-5">
+                        <h3 class="text-white">Items on SALE</h3>
+                        <p class="text-white">Discount up to 30%</p>
+                        <a href="" class="anim-btn text-white">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 p-0">
+                <div class="row flex-column px-4 gap-3">
+                    <div class="col p-5 banner-ad-2">
+                        <h3 class="text-white">Items on SALE</h3>
+                        <p class="text-white">Discount up to 30%</p>
+                        <a href="" class="anim-btn text-white">SHOP NOW</a>
+                    </div>
+                    <div class="col banner-ad-3 p-5">
+                        <h3 class="text-white">Items on SALE</h3>
+                        <p class="text-white">Discount up to 30%</p>
+                        <a href="" class="anim-btn text-white">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured products -->
+<section class="py-5 overflow-hidden">
+    <div class="px-lg-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header d-flex flex-wrap justify-content-between align-items-center mb-5">
+                     <h2 class="section-title fs-2 fw-1">
+                        Featured Products
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <a href="#">
+                            <button class=" btn btn-success me-2">View All</button>
+                        </a>
+                        <div class="slidebtns mt-3 gap-2">
+                            <div class="swiper-button-prev-1 bg-gray rounded-3 swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2" aria-disabled="true"><i class="ri-arrow-left-s-line text-dark fs-1"></i></div>
+                            <div class="swiper-button-next-1 bg-gray rounded-3" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-2" aria-disabled="false"><i class="ri-arrow-right-s-line text-dark fs-1"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-4">
+            <div class="row">
+                <div class="swiper Swiper-02 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="swiper-wrapper-2" aria-live="polite">
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Greek Style Plain Yogurt</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Pure Squeezed No Pulp Orange Juice</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-3.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Fresh Oranges</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-4.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Gourmet Dark Chocolate Bars</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-5.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Fresh Green Celery</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-6.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Sandwich Bread</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-7.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-8.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Whole Wheat Sandwich Bread</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-9.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- mamber -->
+<secction class="py-5">
+    <div class="px-lg-4">
+        <div class="row p-5 justify-content-center" style="background-image: url('img/member.jpg'); background-size: cover; background-repeat: no-repeat;">
+            <div class="col-10 col-lg-5 text-white d-flex flex-column px-5 py-3">
+                <h1 class="m-0 py-1">Get 25% Discount on your first purchase</h1>
+                <p class="m-0 py-1">Just Sign Up & Register it now to become member.</p>
+            </div>
+            <div class="col-10 col-lg-5">
+                <div>
+                    <input type="text" class="form-control mt-3" placeholder="Name">
+                </div>
+                <div>
+                    <input type="text" class="form-control mt-3" placeholder="Email Address">
+                </div>
+                <div>
+                    <input type="submit" class=" btn form-control mt-3 bg-dark text-white">
+                </div>
+            </div>
+        </div>
+    </div>
+</secction>
+<!-- most popular products -->
+<section class="py-5 overflow-hidden">
+    <div class="px-lg-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header d-flex flex-wrap justify-content-between align-items-center mb-5">
+                     <h2 class="section-title fs-2 fw-1">
+                        Most Popular Products
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <a href="#">
+                            <button class=" btn btn-success me-2">View All</button>
+                        </a>
+                        <div class="slidebtns mt-3 gap-2">
+                            <div class="swiper-button-prev-1 bg-gray rounded-3 swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2" aria-disabled="true"><i class="ri-arrow-left-s-line text-dark fs-1"></i></div>
+                            <div class="swiper-button-next-1 bg-gray rounded-3" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-2" aria-disabled="false"><i class="ri-arrow-right-s-line text-dark fs-1"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-4">
+            <div class="row">
+                <div class="swiper Swiper-02 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="swiper-wrapper-2" aria-live="polite">
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Greek Style Plain Yogurt</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Pure Squeezed No Pulp Orange Juice</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-3.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Fresh Oranges</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-4.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Gourmet Dark Chocolate Bars</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-5.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Fresh Green Celery</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-6.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Sandwich Bread</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-7.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-8.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Whole Wheat Sandwich Bread</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-9.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Just arrived products -->
+<section class="py-5 overflow-hidden">
+    <div class="px-lg-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header d-flex flex-wrap justify-content-between align-items-center mb-5">
+                     <h2 class="section-title fs-2 fw-1">
+                        Just arrived
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <a href="#">
+                            <button class=" btn btn-success me-2">View All</button>
+                        </a>
+                        <div class="slidebtns mt-3 gap-2">
+                            <div class="swiper-button-prev-2 bg-gray rounded-3 swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2" aria-disabled="true"><i class="ri-arrow-left-s-line text-dark fs-1"></i></div>
+                            <div class="swiper-button-next-2 bg-gray rounded-3" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-2" aria-disabled="false"><i class="ri-arrow-right-s-line text-dark fs-1"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-4">
+            <div class="row">
+                <div class="swiper Swiper-03 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                    <div class="swiper-wrapper" id="swiper-wrapper-2" aria-live="polite">
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Greek Style Plain Yogurt</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Pure Squeezed No Pulp Orange Juice</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-3.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Fresh Oranges</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-4.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Gourmet Dark Chocolate Bars</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-5.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Fresh Green Celery</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-6.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Sandwich Bread</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-7.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-8.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Whole Wheat Sandwich Bread</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide d-flex swiper-slider-active" role="group" aria-label="1/9" style="width: 710px; margin-right: 20px;">
+                            <div class="col">
+                                <div class="card products border-0">
+                                    <div class="card-img-top text-center p-3 justify-content-center d-flex">
+                                        <a href="">
+                                            <img class="tab-image" src="img/mpp-9.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex flex-column text-center gap-2">
+                                        <h3 class="fs-6 fw-normal">Honeycrisp Apples</h3>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="rating d-flex">
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                                <div width="18" height="18" class="text-warning">⭐</div>
+                                            </span>
+                                            <span>
+                                                (41)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <span><del>$44.00</del></span>
+                                            <span><b>$40.00</b></span>
+                                            <span class="border border-sm fw-light px-1">10% OFF</span>
+                                        </div>
+                                        <div class="hiding-btn align-items-center p-3 pt-0">
+                                            <div class="row g-1 mt-2">
+                                                <div class="col-3">
+                                                    <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">
+                                                </div>
+                                                <div class="col-7">
+                                                    <a href="#" class="btn btn-success rounded-1 p-2 fs-7 btn-cart">
+                                                        <span width="18" height="18"><i class="ri-shopping-cart-2-line"></i></span> Add to Cart
+                                                    </a>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                        <span width="18" height="18"><i class="ri-heart-line"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog -->
+<section class="py-5">
+    <div class="px-lg-4">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-4">
+                <div class="card p-3 border-0 shadow" style="width: 100%;">
+                    <img src="img/blog-1.jpg" class="card-img-top py-2" alt="...">
+                    <div class="card-body">
+                        <p class="fs-smaller fw-light mt-1"><i class="ri-calendar-line"></i> 22 AUG 2021 &nbsp; &nbsp; <i class="ri-folder-line"></i> TIPS AND TRICKS</p>
+                        <h5 class="card-title">Top 10 casual look ideas to dress up your kids</h5>
+                        <p class="card-text fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti ipsum illo, illum accusamus hic! Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-4">
+                <div class="card p-3 border-0 shadow" style="width: 100%;">
+                    <img src="img/blog-2.jpg" class="card-img-top py-2" alt="...">
+                    <div class="card-body">
+                        <p class="fs-smaller fw-light mt-1"><i class="ri-calendar-line"></i> 25 AUG 2021 &nbsp; &nbsp; <i class="ri-folder-line"></i> TRENDING</p>
+                        <h5 class="card-title">Latest trends of wearing street wears supremely</h5>
+                        <p class="card-text fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti ipsum illo, illum accusamus hic! Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-4">
+                <div class="card p-3 border-0 shadow" style="width: 100%;">
+                    <img src="img/blog-1.jpg" class="card-img-top py-2" alt="...">
+                    <div class="card-body">
+                        <p class="fs-smaller fw-light mt-1"><i class="ri-calendar-line"></i> 28 AUG 2021 &nbsp; &nbsp; <i class="ri-folder-line"></i> INSPIRATION</p>
+                        <h5 class="card-title">10 Different Types of comfortable clothes ideas for women</h5>
+                        <p class="card-text fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corrupti ipsum illo, illum accusamus hic! Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- app-ad -->
+<section class="py-5">
+    <div class="px-lg-4">
+        <div class="bg-warning pt-5 rounded-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-4">
+                    <h2 class="mt-5 fw-bold">Download Organic App</h2>
+                    <p class="text-gray fs-6">Online Orders made easy, fast and reliable</p>
+                    <div class="d-flex gap-2 flex-wrap mb-5">
+                        <a href="#">
+                            <img src="img/appstore.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/playstore.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <img src="img/banner-3.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- relatables -->
+<section class="py-5">
+    <div class="px-lg-4">
+        <h2 class="fw-bold">People are also looking for</h2>
+        <div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Blue diamon almonds</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Angie's Boomchickapop Corn</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Salty kettle Corn</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Chobani Greek Yogurt</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Chobani Greek Yogurt</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Sweet Vanilla Yogurt</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Foster Farms Takeout Crispy wings</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Warrior Blend Organic</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Chao Cheese Creamy</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Cheicken meatball</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Blue diamon almonds</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Angie's Boomchickapop Corn</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Salty kettle Corn</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Chobani Greek Yogurt</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Chobani Greek Yogurt</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Sweet Vanilla Yogurt</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Foster Farms Takeout Crispy wings</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Warrior Blend Organic</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Chao Cheese Creamy</div>
+            <div class="btn bg-warning-subtle m-1" style="color: gray;">Cheicken meatball</div>
+        </div>
+    </div>
+</section>
+<!-- cards -->
+<section class="py-5">
+    <div class="px-lg-4">
+        <div class="row justify-content-center row-cols-lg-6 gap-3">
+            <div class="col-7 col-md-4">
+                <div class="card p-2 px-3">
+                    
+                    <div class="card-body">
+                        <i class="ri-box-3-line border p-1 border-2 rounded-circle"></i>
+                        <h5 class="card-title mt-3">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 col-md-4">
+                <div class="card p-2 px-3">
+                    
+                    <div class="card-body">
+                        <i class="ri-briefcase-2-line border p-1 border-2 rounded-circle"></i>
+                        <h5 class="card-title mt-3">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 col-md-4">
+                <div class="card p-2 px-3">
+                    
+                    <div class="card-body">
+                        <i class="ri-shield-check-fill border p-1 border-2 rounded-circle"></i>
+                        <h5 class="card-title mt-3">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 col-md-4">
+                <div class="card p-2 px-3">
+                    
+                    <div class="card-body">
+                        <i class="ri-check-double-line border p-1 border-2 rounded-circle"></i>
+                        <h5 class="card-title mt-3">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 col-md-4">
+                <div class="card p-2 px-3">
+                    
+                    <div class="card-body">
+                        <i class="ri-gift-2-line border p-1 border-2 rounded-circle"></i>
+                        <h5 class="card-title mt-3">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer-1 -->
+<section class="py-5">
+    <div class="px-lg-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 shadow-sm rounded-4 p-3">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <div class="media mt-3">
+                    <ul class="d-flex list-unstyled gap-2">
+                        <li>
+                            <a href="#" class="btn shadow">
+                                <i class="ri-facebook-fill fs-6 text-gray"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn shadow">
+                                <i class="ri-twitter-line fs-6 text-gray"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn shadow">
+                                <i class="ri-youtube-fill fs-6 text-gray"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn shadow">
+                                <i class="ri-instagram-line fs-6 text-gray"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn shadow">
+                                <i class="ri-amazon-fill fs-6 text-gray"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 shadow-sm rounded-4 p-3">
+                <div class="footer">
+                    <h5 class="title text-dark pb-2 fw-bold">Organic</h5>
+                    <ul class="menu-list list-unstyled">
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">About us</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Conditions </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Our Journals</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Careers</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Affiliate Programme</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Ultras Press</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 shadow-sm rounded-4 p-3">
+                <div class="footer">
+                    <h5 class="title text-dark pb-2 fw-bold">Quick Links</h5>
+                    <ul class="menu-list list-unstyled">
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Offers</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Discount Coupons</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Stores</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Track Order</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Shop</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Info</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 shadow-sm rounded-4 p-3">
+                <div class="footer">
+                    <h5 class="title text-dark pb-2 fw-bold">Customer Service</h5>
+                    <ul class="menu-list list-unstyled">
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">FAQ</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Contact</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Privacy Policy</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Returns &amp; Refunds</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Cookie Guidelines</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="nav-link text-gray fs-9 pb-2">Delivery Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 shadow-sm rounded-4 p-3">
+                <div class="footer">
+                    <h5 class="title text-dark pb-2 fw-bold">Subscribe Us</h5>
+                    <p class="text-gray fs-9 lh-lg">Subscribe to our newsletter to get updates about our grand offers.</p>
+                    <div class="d-flex">
+                        <input type="email" placeholder="Email Address" class="border-0 bg-dark-subtle fs-6 p-1 rounded" style="width: 35%;">
+                        <div class="btn bg-dark fs-6 text-light">subscribe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer-2 -->
+<section class="py-1">
+    <div class="px-3">
+        <div class="row shadow-sm py-3 rounded-1">
+            <div class="col-12 col-md-6">
+                <span style="color: gray;">© 2024 Organic. All rights reserved.</span>
+            </div>
+            <div class="col-12 col-md-6 text-start text-md-end">
+                <span class="text-gray">HTML Template by <a href="https://templatesjungle.com/" class="ftr-link">TemplatesJungle</a>  Distributed By <a href="https://themewagon.com/" class="ftr-link">ThemeWagon</a></span>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
+<script>
+
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 2,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
+        },
+        breakpoints: {
+            567: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+            1499: {
+                slidesPerView: 8,
+                spaceBetween: 30,
+            },
+        },
+    });
+    var swiper = new Swiper(".Swiper-02", {
+       
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next-1",
+            prevEl: ".swiper-button-prev-1",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            991: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1499: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
+    var swiper = new Swiper(".Swiper-03", {
+       
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next-2",
+            prevEl: ".swiper-button-prev-2",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1499: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
+    var swiper = new Swiper(".Swiper-2", {
+       
+        slidesPerView: 2,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next-3",
+            prevEl: ".swiper-button-prev-3",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1499: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+
+
+</script>
 </html>
